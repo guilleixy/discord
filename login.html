@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Discord</title>
+		<link  rel="stylesheet" type="text/css" href="estilos/login.css">
+		<link  rel="stylesheet" type="text/css" href="estilos/reset.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+		<link href="estilos/login.css">
+		<link href="estilos/reset.css">
+	</head>
+
+	<body>
+		<div class="login-container flex border-rd">
+			<div class="form-wrapper flex column-center">
+				<h1 class="hola">¡Hola de nuevo!</h1>
+				<p class="saludo">¡Nos alegramos mucho de volver a verte!</p>
+				<form class=" flex column form" method="post" action="login.php">
+					<label class="login-label">CORREO ELECTRÓNICO O NÚMERO DE TELÉFONO<sup>*</sup></label>
+					<input class="form-inpt border-rd input-h" type="text" name="email">
+					<label class="login-label">CONTRASEÑA<sup>*</sup></label>
+					<input class="form-inpt border-rd input-h" type="password" name="password">
+					<a class="a-s">¿Has olvidado la contraseña?</a>
+					<input value="Iniciar sesión" type="submit" class="flex column-center login-btn border-rd pointer">
+					<div class="register-act">
+						<label>¿Necesitas una cuenta? </label><a href="register.html"><span class="fnt-weight-bold">Registrarse</span></a> <!--label aqui no tienes sentido-->
+					</div>
+				</form>
+			</div>		<!--en vez de label usan legend-->
+			<div class="qr-wrapper flex column-center">
+				<img class="qr-img" src="./img/qr.png" alt="qr">
+				<h2 class="text-center">Inicia sesión con <br> código QR</h2>
+				<p class="text-center padding-text">
+					Escanéalo con la <span class="fnt-weight-bold">aplicación de
+						móvil de Discord</span> para iniciar
+					sesión de forma instantánea.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

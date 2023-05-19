@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Discord</title>
+		<link  rel="stylesheet" type="text/css" href="estilos/login.css">
+		<link  rel="stylesheet" type="text/css" href="estilos/reset.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+		<link href="estilos/reset.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<link href="estilos/login.css">
+	</head>
+
+	<body>
+		<div class="register-container flex border-rd column flex-space">
+            <h1 class="text-center crear">Crear una cuenta</h1>
+            <form class=" flex border-rd column" action="new_user.php" method="post">
+                <label class="register-label">CORREO ELECTRÓNICO</label>
+                <input class="form-inpt border-rd inpt-marg input-h padd" type="email" name="email">
+                <label class="register-label">NOMBRE DE USUARIO</label>
+                <input class="form-inpt border-rd inpt-marg input-h" type="text" name="username">
+                <label class="register-label">CONTRASEÑA</label>
+                <input  class="form-inpt border-rd inpt-marg input-h" type="password" name="password">
+                <label class="register-label">FECHA DE NACIMIENTO</label>
+                <div class="flex select-align">
+                    <select id="selectdia" class="js-example-basic-single select-stl pointer" name="day">
+                    </select>
+                    <select id="selectmes" class="js-example-basic-single select-stl pointer" name="month">
+                        <option value="1">enero</option>
+                        <option value="2">febrero</option>
+                        <option value="3">marzo</option>
+                        <option value="4">abril</option>
+                        <option value="5">mayo</option>
+                        <option value="6">junio</option>
+                        <option value="7">julio</option>
+                        <option value="8">agosto</option>
+                        <option value="9">septiembre</option>
+                        <option value="10">octubre</option>
+                        <option value="11">noviembre</option>
+                        <option value="12">diciembre</option>
+                    </select>
+                    <select id="selectyear"  class="js-example-basic-single select-stl pointer" name="year">
+                    </select>
+                </div>
+                <br>
+                <div id="mensaje" class="mensaje-wrapper">
+                    <div class="mensaje mensaje-bg">
+                        Tienes que aceptar
+                        nuestras Condiciones del
+                        Servicio para continuar
+                    </div>
+                    <div class="flechita mensaje-bg">
+                    </div>
+                </div>
+                <div class="flex">
+                    <input class="pointer" type="checkbox" id="terms" name="terms">
+                    <label class="small">
+                        He leído y acepto las <a>Condiciones del Servicio</a> y Ia <a>Política de Privacidad</a>
+                        de Discord.
+                    </label>
+                </div>
+                <div class="flex">
+                    <input class="pointer" type="checkbox" name="mailing_list">
+                    <label class="small">(Opcional) Estoy de acuerdo con que me envíen correos con
+                        actualizaciones, consejos y ofertas especiales de Discord. Puedes revocar
+                        el consentimiento en cualquier momento.
+                    </label>
+                </div>
+
+                <input type="button" value="Continuar"  class="flex column-center login-btn border-rd hvr-no not-allowed-button" id="register">
+                <a href="login.html">¿Ya tienes una cuenta?</a>
+            </form>
+		</div>
+        <script src="register.js"></script>
+	</body>
+</html>
